@@ -1,4 +1,4 @@
-# inherit everything from Human class into male
+# inherit everything from Human class into female
 
 # how to import from another file in python
 from human import Human

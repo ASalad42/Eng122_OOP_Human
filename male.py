@@ -24,5 +24,5 @@ class Male(Human): # parent class (Human) is the base super class
 
 male_object = Male()
 
-print(male_object.attend_meetings())
-print(male_object.sleep())
+#print(male_object.attend_meetings())
+#print(male_object.sleep())
