@@ -16,7 +16,7 @@ class Female(Human): # parent class (Human) is the base super class
         return "works part time"
 
     def send_email(self):
-        return "sends emails manually"
+        pass # nothing happens
 
     def attend_meetings(self):
         return "only on wednesdays and Fridays"
@@ -24,6 +24,8 @@ class Female(Human): # parent class (Human) is the base super class
 
 female_object = Female()
 
-print(female_object.work())
-print(female_object.run())
+#print(female_object.work())
+#print(female_object.run())
+
+print(female_object.send_email())
 

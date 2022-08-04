@@ -1,6 +1,21 @@
 # Human OOP
 
-![](C:\Users\Ayan\PycharmProjects\human_oop\humandiagram.PNG)
+![](https://github.com/ASalad42/Eng122_OOP_Human/blob/main/humandiagram.PNG)
+
+## keywords 
+`pass` 
+- When the pass statement is executed, nothing happens, but you avoid getting an error when empty code is not allowed. 
+- Empty code is not allowed in loops, function definitions, class definitions, or in if statements. 
+
+`super()` 
+- function is used to give access to methods and properties of a parent or sibling class.
+- super() function will make the child class inherit all the methods and properties from its parent
+
+`__init__(self):` 
+- All classes have a function called __init__(), which is always executed when the class is being initiated. 
+- Use the __init__() function to assign values to object properties, or other operations that are necessary to do when the object is being created
+- __init__ to declare class attributes
+- The __init__() function is called automatically every time the class is being used to create a new object.
 
 ## Step 1
 ````python
@@ -130,3 +145,40 @@ print(boy_object.send_email())
 ````
 
 ## Step 5
+
+````python
+# inherit everything from Human class into female
+
+# how to import from another file in python
+from human import Human
+
+class Female(Human): # parent class (Human) is the base super class
+    def __init__(self): # __init__ to declare class attributes
+
+        # this lets the program know to inherit everything from parent class
+        super().__init__() # super is used to inherit everything from base class
+        self.working = True
+        self.has_womb = True
+        self.has_long_hair = True
+
+    def work(self):
+        return "works part time"
+
+    def send_email(self):
+        pass # nothing happens 
+
+    def attend_meetings(self):
+        return "only on wednesdays and Fridays"
+
+
+female_object = Female()
+
+#print(female_object.work())
+#print(female_object.run())
+
+print(female_object.send_email())
+
+````
+
+## Four Pillars 
+

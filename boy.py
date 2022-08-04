@@ -15,14 +15,20 @@ class Boy(Male): # parent class (Male) is the base super class
     def play(self):
         return "plays on the weekends"
 
-    def study(self):
-        return "studies every weekday"
+    def _study(self): # protected encapsulation
+        try:
+            return boy_object._study()
+        except RecursionError:
+            return "boy is protected at school"
 
-    def swims(self):
-        return "swims every friday"
+    def __swims(self): # private encapsulation
+        try:
+            return boy_object.__swims()
+        except AttributeError:
+            return "where he swims is private and hidden "
 
 
 boy_object = Boy()
-
-print(boy_object.study())
-print(boy_object.send_email())
+print(boy_object._study())
+print(boy_object.__swims())
+#print(boy_object.send_email())
