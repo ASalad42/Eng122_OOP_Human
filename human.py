@@ -20,4 +20,25 @@ class Human:
 
 person = Human()
 
-# print(person.eat())
+print(person.eat())
+
+
+# Polymorphism example
+
+class Person1():
+    def gender(self):
+        print("this person is male")
+    def main_hand(self):
+        print("is right handed")
+
+man_object = Person1()
+print(man_object.main_hand())
+
+class Person2():
+    def gender(self):
+        print("this person is female")
+    def main_hand(self):
+        print("is left handed")
+
+women_object= Person2()
+print(women_object.main_hand())
