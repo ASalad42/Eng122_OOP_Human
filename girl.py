@@ -1,4 +1,6 @@
-# inherit everything from Female class into boy
+# Creating girl class
+
+# inherit everything from Female class into girl
 
 # how to import from another file in python
 from female import Female

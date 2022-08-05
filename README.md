@@ -70,6 +70,8 @@ print(women_object.main_hand())
 ## Step 2 
 
 ````python
+# Creating male class 
+
 from human import Human
 
 class Male(Human): # parent class (Human) is the base super class
@@ -101,6 +103,8 @@ print(male_object.sleep())
 ## Step 3
 
 ````python
+# Creating female class 
+
 # inherit everything from Human class into female
 
 # how to import from another file in python
@@ -135,6 +139,8 @@ print(female_object.run())
 ## Step 4
 
 ````python
+# Creating boy class 
+
 # inherit everything from Male class into boy
 
 # how to import from another file in python
@@ -169,36 +175,43 @@ print(boy_object.send_email())
 ## Step 5
 
 ````python
-# inherit everything from Human class into female
+# Creating girl class 
+
+# inherit everything from Female class into girl
 
 # how to import from another file in python
-from human import Human
+from female import Female
 
-class Female(Human): # parent class (Human) is the base super class
+class Girl(Female): # parent class (Female) is the base super class
     def __init__(self): # __init__ to declare class attributes
 
         # this lets the program know to inherit everything from parent class
         super().__init__() # super is used to inherit everything from base class
-        self.working = True
-        self.has_womb = True
-        self.has_long_hair = True
+        self.school = True
+        self.parents = True
+        self.toys = True
 
-    def work(self):
-        return "works part time"
+    def play(self):
+        return "plays after school"
 
-    def send_email(self):
-        pass # nothing happens 
+    def _study(self): # protected encapsulation
+        try:
+            return girl_object._study()
+        except AttributeError:
+            return "girl is protected at school"
 
-    def attend_meetings(self):
-        return "only on wednesdays and Fridays"
+    def __swims(self): # private encapsulation
+        try:
+            return girl_object.__swims()
+        except AttributeError:
+            return "where girl swims is private and hidden "
+
+girl_object = Girl()
+
+print(girl_object.play())
+print(girl_object._study)
 
 
-female_object = Female()
-
-#print(female_object.work())
-#print(female_object.run())
-
-print(female_object.send_email())
 
 ````
 
